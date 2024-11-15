@@ -4,40 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>AI Poem Generator</title>
   </head>
   <body>
-    <header>
-      <h1>AI Poem generator</h1>
-    </header>
-    <main>
-      <form id="poem-generator-form">
-        <input
-          type="text"
-          placeholder="Enter the topic of the poem"
-          autofocus
-          required
-          autocomplete="off"
-          class="instructions"
-        />
-        <input type="submit" class="submit-button" />
-      </form>
-      <div class="poem" id="poem"></div>
-    </main>
-    <footer>
-      This was coded by
-      <a href="https://github.com/mully93" target="_blank">Emma Mullane</a> and
-      is
-      <a href="https://github.com/mully93/poem-generator" target="_blank"
-        >open-sourced on Github</a
-      >
-      and is hosted on
-      <a href="https://emmas-poem-generator.netlify.app" target="_blank"
-        >Netlify</a
-      >
-    </footer>
-
+    <div class="container">
+      <header>
+        <h1>AI Poem generator</h1>
+      </header>
+      <main>
+        <form id="poem-generator-form">
+          <input
+            type="text"
+            placeholder="Enter the topic of the poem"
+            autofocus
+            required
+            autocomplete="off"
+            class="instructions"
+            id="user-instructions"
+          />
+          <input type="submit" class="submit-button" />
+        </form>
+        <div class="poem" id="poem"></div>
+      </main>
+      <footer>
+        This was coded by
+        <a href="https://github.com/mully93" target="_blank">Emma Mullane</a>
+        and is
+        <a href="https://github.com/mully93/poem-generator" target="_blank"
+          >open-sourced on Github</a
+        >
+        and is hosted on
+        <a href="https://emmas-poem-generator.netlify.app" target="_blank"
+          >Netlify</a
+        >
+      </footer>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
